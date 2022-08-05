@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   },
 
   postLikeButton: {
-    
+    paddingVertical: 8,
   },
 });
 
