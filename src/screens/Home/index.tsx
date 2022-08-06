@@ -16,8 +16,8 @@ const buttonDataList: ButtonData[] = [
     to: 'Like',
   },
   {
-    text: 'Cadastro',
-    to: 'Cadastro',
+    text: 'Chat',
+    to: 'Chat',
   },
 ];
 
