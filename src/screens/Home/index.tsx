@@ -29,8 +29,8 @@ const HomeScreen: React.FC<Props> = function (props) {
 
   return (
     <View style={styles.home}>
-      {buttonDataList.map( buttonData =>
-        <Pressable onPress={() => props.navigation.navigate(buttonData.to)}>  
+      {buttonDataList.map( (buttonData, index) =>
+        <Pressable key={index} onPress={() => props.navigation.navigate(buttonData.to)}>  
           <Text style={styles.button}>{buttonData.text}</Text>
         </Pressable>  
       )}
