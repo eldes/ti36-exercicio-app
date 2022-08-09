@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
   photo: {
     margin: 16,
     alignSelf: 'center',
+    alignItems: 'stretch',
   },
 
   photoImage: {
