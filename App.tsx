@@ -4,6 +4,7 @@ import ChatScreen from './src/screens/Chat';
 import HomeScreen from './src/screens/Home';
 import LikeScreen from './src/screens/Like';
 import RatingScreen from './src/screens/Rating';
+import TaskListScreen from './src/screens/TaskList';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -15,8 +16,9 @@ export default function App() {
         <Stack.Screen name="Like" component={LikeScreen} />
         <Stack.Screen name="Chat" component={ChatScreen} />
         <Stack.Screen name="Rating" component={RatingScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+          <Stack.Screen name="TaskList" component={TaskListScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
   );
 }
 
@@ -25,5 +27,6 @@ export type StackParams = {
   Like: undefined;
   Chat: undefined;
   Rating: undefined;
+  TaskList: undefined;
   Cadastro: undefined;
 };

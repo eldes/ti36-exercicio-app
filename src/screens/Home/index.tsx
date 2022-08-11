@@ -23,6 +23,10 @@ const buttonDataList: ButtonData[] = [
     text: 'Rating',
     to: 'Rating',
   },
+  {
+    text: 'TaskList',
+    to: 'TaskList',
+  },
 ];
 
 const HomeScreen: React.FC<Props> = function (props) {
