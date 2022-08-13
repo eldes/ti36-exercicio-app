@@ -1,13 +1,24 @@
-import { useState } from 'react';
+import { AppBar, IconButton } from '@react-native-material/core';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import React, { useState } from 'react';
 import { Image, Pressable, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { StackParams } from '../../../App';
 import fotoImage from '../../../assets/like/foto.jpg';
 import styles from './styles';
 
-type Props = {
-};
+type Props = NativeStackScreenProps<StackParams, 'Like'>;
 
 const LikeScreen: React.FC<Props> = function (props) {
+
+  props.navigation.setOptions({
+    header: () => <AppBar
+     title="Like"
+      leading={ leadingProps => (
+        <IconButton icon={props => <Icon name="arrow-back-ios" {...props} />} {...leadingProps} onPress={() => props.navigation.goBack() } />
+      )}
+    />
+  });
   const [liked, setLiked] = useState(false);
 
   let firstPressTime = new Date().getTime();
@@ -46,3 +57,6 @@ const LikeScreen: React.FC<Props> = function (props) {
 
 
 export default LikeScreen;
+export type {
+  Props as LikeScreenProps
+};
