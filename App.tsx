@@ -1,4 +1,4 @@
-import { AppBar, IconButton } from '@react-native-material/core';
+import { AppBar, Button, IconButton } from '@react-native-material/core';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { DrawerActions, NavigationContainer, useNavigation } from '@react-navigation/native';
 import React from 'react';
@@ -8,6 +8,7 @@ import ChatScreen from './src/screens/Chat';
 import HomeScreen from './src/screens/Home';
 import LikeScreen from './src/screens/Like';
 import RatingScreen from './src/screens/Rating';
+import StorageScreen from './src/screens/Storage';
 import TaskListScreen from './src/screens/TaskList';
 
 export default function App() {
@@ -42,6 +43,7 @@ export default function App() {
           <Drawer.Screen name="Chat" component={ChatScreen} />
           <Drawer.Screen name="Rating" component={RatingScreen} />
           <Drawer.Screen name="TaskList" component={TaskListScreen} />
+          <Drawer.Screen name="Storage" component={StorageScreen} />
         </Drawer.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
@@ -55,4 +57,5 @@ export type StackParams = {
   Rating: undefined;
   TaskList: undefined;
   Cadastro: undefined;
+  Storage: undefined;
 };
