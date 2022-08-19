@@ -23,7 +23,7 @@ export default function App() {
           screenOptions={{
             header: (headerProps) => (
               <AppBar
-                title={'App'}
+                title={headerProps.options.title}
                 leading={ leadingProps => (
                   <IconButton
                     icon={ props =>
@@ -38,12 +38,12 @@ export default function App() {
               />
             )
           }}>
-          <Drawer.Screen name="Home" component={HomeScreen} />
-          <Drawer.Screen name="Like" component={LikeScreen} />
-          <Drawer.Screen name="Chat" component={ChatScreen} />
-          <Drawer.Screen name="Rating" component={RatingScreen} />
-          <Drawer.Screen name="TaskList" component={TaskListScreen} />
-          <Drawer.Screen name="Storage" component={StorageScreen} />
+          <Drawer.Screen name="Home" component={HomeScreen} options={{title: 'Home'}} />
+          <Drawer.Screen name="Like" component={LikeScreen} options={{title: 'Like'}} />
+          <Drawer.Screen name="Chat" component={ChatScreen} options={{title: 'Chat'}} />
+          <Drawer.Screen name="Rating" component={RatingScreen} options={{title: 'Rating'}} />
+          <Drawer.Screen name="TaskList" component={TaskListScreen} options={{title: 'Task List'}} />
+          <Drawer.Screen name="Storage" component={StorageScreen} options={{title: 'Storage'}} />
         </Drawer.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
