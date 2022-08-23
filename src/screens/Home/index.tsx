@@ -4,7 +4,7 @@ import { useFocusEffect } from '@react-navigation/native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useCallback, useState } from 'react';
 import { View } from 'react-native';
-import { StackParams } from '../../../App';
+import { StackParams } from '../../routes/StackParams';
 import styles from './styles';
 
 type Props = NativeStackScreenProps<StackParams, 'Home'>;

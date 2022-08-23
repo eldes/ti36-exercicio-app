@@ -7,7 +7,7 @@ import TaskItem from './TaskItem';
 
 const getNextId = 0;
 
-const TaskListScreen = function () {
+const TaskListScreen: React.FC = function () {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [text, setText] = useState('');
   let nextId = 0;

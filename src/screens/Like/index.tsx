@@ -3,8 +3,8 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React, { useState } from 'react';
 import { Image, Pressable, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { StackParams } from '../../../App';
 import fotoImage from '../../../assets/like/foto.jpg';
+import { StackParams } from '../../routes/StackParams';
 import styles from './styles';
 
 type Props = NativeStackScreenProps<StackParams, 'Like'>;
